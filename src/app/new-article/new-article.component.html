@@ -1,0 +1,19 @@
+<form (ngSubmit)="addArticle(f)" id="ngForm" #f="ngForm" novalidate>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Title here" [(ngModel)]="article.title" #title="ngModel" name="title">
+  </div>
+  <div class="mb-3">
+    <label for="content" class="form-label">Content</label>
+    <textarea class="form-control" id="content" rows="20" [(ngModel)]="article.content" #content="ngModel" name="content"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="tags" class="form-label">Tags</label>
+    <input type="text" class="form-control" id="tags" placeholder="add your tags there, separating them with a comma" ngModel #tags="ngModel" name="tags">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<button type="button" class="btn btn-secondary">Add QCM</button>
+
+
